@@ -13,7 +13,7 @@ import '@aws-amplify/ui-vue/styles.css';
         <img alt="AE logo" class="logo" src="@/assets/AElogo.svg" width="125" height="125" />
         <div class="wrapper">
           <h1>Hello {{ user.username }}!</h1>
-          <HelloWorld msg="AE Portal" />
+          <HelloWorld msg="Welcome to AE Portal" />
 
           <nav>
             <RouterLink to="/">Home</RouterLink>
