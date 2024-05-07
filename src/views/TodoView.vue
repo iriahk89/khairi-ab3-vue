@@ -4,23 +4,6 @@
   import * as subscriptions from '../graphql/subscriptions';
   import { generateClient } from 'aws-amplify/api';
   import { onMounted, ref } from 'vue';
-  import { get } from 'aws-amplify/api';
-
-  async function getExaminationsResult() {
-    try {
-      const restOperation = get({ 
-        apiName: 'examinationsapi',
-        path: '/examinations' 
-      });
-      const response = await restOperation.response;
-      const { body } = await restOperation.response;
-      const json = await body.json();
-      console.log('GET call succeeded: ', response);
-      console.log('response: ', json);
-    } catch (e) {
-      console.log('GET call failed: ', JSON.parse(e.response.body));
-    }
-  }
 
   const name = ref('');
   const description = ref('');
@@ -60,7 +43,6 @@
   }
 
   onMounted(() => {
-    getExaminationsResult();
     fetchTodos();
     subscribeToNewTodos();
   });

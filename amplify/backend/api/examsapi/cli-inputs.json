@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/exams": {
+      "name": "/exams",
+      "lambdaFunction": "examsLambda",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

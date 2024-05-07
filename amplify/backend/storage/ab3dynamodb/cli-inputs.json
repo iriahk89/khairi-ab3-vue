@@ -1,0 +1,14 @@
+{
+  "resourceName": "ab3dynamodb",
+  "tableName": "examstable",
+  "partitionKey": {
+    "fieldName": "StudentId",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "Name",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

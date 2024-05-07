@@ -9,14 +9,36 @@
       "UnauthRoleName": "amplify-khairiab3vue-dev-1c6c2-unauthRole",
       "StackName": "amplify-khairiab3vue-dev-1c6c2",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:590183969838:stack/amplify-khairiab3vue-dev-1c6c2/09a5bb70-0b6a-11ef-8f4a-0661c8490be3",
-      "AmplifyAppId": "d3bntnovyg6b18"
+      "AmplifyAppId": "d3bntnovyg6b18",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-khairiab3vue-dev-1c6c2-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "api": {
-        "khairiab3vue": {}
+        "khairiab3vue": {},
+        "examsapi": {},
+        "examinationsapi": {}
       },
       "auth": {
         "khairiab3vue3fec33fb": {}
+      },
+      "function": {
+        "examsLambda": {
+          "deploymentBucketName": "amplify-khairiab3vue-dev-1c6c2-deployment",
+          "s3Key": "amplify-builds/examsLambda-61766d543334514c5275-build.zip"
+        },
+        "examinationsLambda": {
+          "deploymentBucketName": "amplify-khairiab3vue-dev-1c6c2-deployment",
+          "s3Key": "amplify-builds/examinationsLambda-4c557970467862636e31-build.zip"
+        }
+      },
+      "storage": {
+        "ab3dynamodb": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3bntnovyg6b18",
+          "type": "cicd"
+        }
       }
     }
   }

@@ -9,14 +9,16 @@ import '@aws-amplify/ui-vue/styles.css';
   <authenticator>
     <template v-slot="{ user, signOut }">
       <header>
-        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+        <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
+        <img alt="AE logo" class="logo" src="@/assets/AElogo.svg" width="125" height="125" />
         <div class="wrapper">
           <h1>Hello {{ user.username }}!</h1>
-          <HelloWorld msg="You did it!" />
+          <HelloWorld msg="AE Portal" />
 
           <nav>
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/todo">Todo</RouterLink>
+            <RouterLink to="/exam">Examination</RouterLink>
             <button @click="signOut">Sign Out</button>
           </nav>
         </div>
@@ -28,6 +30,11 @@ import '@aws-amplify/ui-vue/styles.css';
 </template>
 
 <style scoped>
+
+h1 {
+  text-align: center;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;

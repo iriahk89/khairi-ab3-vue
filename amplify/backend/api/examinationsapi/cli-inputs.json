@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/examinations": {
+      "name": "/examinations",
+      "lambdaFunction": "examinationsLambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
