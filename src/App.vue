@@ -2,27 +2,8 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import { Authenticator } from '@aws-amplify/ui-vue';
-import { getCurrentUser } from 'aws-amplify/auth';
 import { onMounted, ref } from 'vue';
 import '@aws-amplify/ui-vue/styles.css';
-
-async function currentAuthenticatedUser() {
-  try {
-    const { username, userId, signInDetails } = await getCurrentUser();
-    const user = JSON.stringify(await getCurrentUser());
-    console.log(`The user: ${user}`);
-    console.log(`The username: ${username}`);
-    console.log(`The userId: ${userId}`);
-    console.log(`The signInDetails: ${signInDetails}`);
-  } catch (err) {
-    console.log(err);
-  }
-}
-
-
-onMounted(() => {
-    currentAuthenticatedUser();
-  });
 </script>
 
 <template>
@@ -39,7 +20,7 @@ onMounted(() => {
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/todo"  v-if="user.username == 'khairikz'">Todo</RouterLink>
             <RouterLink to="/exam"  v-if="user.username == 'khairikz'">Examination</RouterLink>
-            <RouterLink to="/exam" v-else >Examination Result</RouterLink>
+            <RouterLink to="/result" v-else >Examination Result</RouterLink>
             <button @click="signOut">Sign Out</button>
           </nav>
         </div>

@@ -109,6 +109,11 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "snsapi": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "hosting": {
@@ -116,56 +121,6 @@
       "lastPushTimeStamp": "2024-05-07T03:55:27.134Z",
       "service": "amplifyhosting",
       "type": "cicd"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_function_examinationsLambda_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "examinationsLambda"
-        }
-      ]
-    },
-    "AMPLIFY_function_examinationsLambda_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "examinationsLambda"
-        }
-      ]
-    },
-    "AMPLIFY_function_examsLambda_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "examsLambda"
-        }
-      ]
-    },
-    "AMPLIFY_function_examsLambda_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "examsLambda"
-        }
-      ]
-    },
-    "AMPLIFY_hosting_amplifyhosting_appId": {
-      "usedBy": [
-        {
-          "category": "hosting",
-          "resourceName": "amplifyhosting"
-        }
-      ]
-    },
-    "AMPLIFY_hosting_amplifyhosting_type": {
-      "usedBy": [
-        {
-          "category": "hosting",
-          "resourceName": "amplifyhosting"
-        }
-      ]
     }
   },
   "storage": {
